@@ -1,0 +1,60 @@
+menu "Example Configuration"
+
+choice AUDIO_DECODER_SUPPORT
+    prompt "Audio Decoder"
+    default AUDIO_SUPPORT_MP3_DECODER
+    help
+        Select an audio decoder to decode sdcard music
+
+config AUDIO_SUPPORT_TS_DECODER
+    bool "ESP-TS-DECODER"
+
+config AUDIO_SUPPORT_M4A_DECODER
+    bool "ESP-M4A-DECODER"
+
+config AUDIO_SUPPORT_MP3_DECODER
+    bool "ESP-MP3-DECODER"
+
+config AUDIO_SUPPORT_MP4_DECODER
+    bool "ESP-MP4-DECODER"
+
+config AUDIO_SUPPORT_AMRNB_DECODER
+    bool "ESP-AMRNB-DECODER"
+
+config AUDIO_SUPPORT_AMRWB_DECODER
+    bool "ESP-AMRWB-DECODER"
+
+config AUDIO_SUPPORT_WAV_DECODER
+    bool "ESP-WAV-DECODER"
+
+config AUDIO_SUPPORT_OPUS_DECODER
+    bool "ESP-OPUS-DECODER"
+
+config AUDIO_SUPPORT_OGG_DECODER
+    bool "ESP-OGG-DECODER"
+
+config AUDIO_SUPPORT_AAC_DECODER
+    bool "ESP-AAC-DECODER"
+
+config AUDIO_SUPPORT_FLAC_DECODER
+    bool "ESP-FLAC-DECODER"
+
+endchoice
+
+endmenu
+
+menu "Pcb Version Choice"
+
+choice PCB_SELECT_SUPPORT
+    prompt "Pcb Version Choice"
+    default BY_CGTLB_V11_20240424
+    help
+        Select an pcb version
+config BY_CGTLB_V11_20240424
+    bool "BY_CGTLB_V11_20240424"
+
+config BY_CGTLB_V10_20240315
+    bool "BY_CGTLB_V10_20240315"
+endchoice
+
+endmenu

@@ -1,0 +1,14 @@
+prefix=/home/thzy/work/new_disk/Y06/play/sdk/audio_play/sysroot
+exec_prefix=${prefix}
+libdir=/home/thzy/work/new_disk/Y06/play/sdk/audio_play/sysroot/lib
+includedir=/home/thzy/work/new_disk/Y06/play/sdk/audio_play/sysroot/include
+
+Name: libavformat
+Description: FFmpeg container format library
+Version: 59.27.100
+Requires: 
+Requires.private: libavcodec >= 59.37.100, libswresample >= 4.7.100, libavutil >= 57.28.100
+Conflicts:
+Libs: -L${libdir}  -lavformat 
+Libs.private: -lm -latomic -lz -lssl -lcrypto
+Cflags: -I${includedir}

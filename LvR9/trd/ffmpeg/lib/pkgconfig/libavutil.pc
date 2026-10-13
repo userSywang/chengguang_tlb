@@ -1,0 +1,14 @@
+prefix=/home/thzy/work/new_disk/Y06/play/sdk/audio_play/sysroot
+exec_prefix=${prefix}
+libdir=/home/thzy/work/new_disk/Y06/play/sdk/audio_play/sysroot/lib
+includedir=/home/thzy/work/new_disk/Y06/play/sdk/audio_play/sysroot/include
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 57.28.100
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavutil 
+Libs.private: -pthread -lm -latomic
+Cflags: -I${includedir}
